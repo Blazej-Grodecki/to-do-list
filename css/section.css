@@ -1,6 +1,11 @@
+.section {
+    background-color: white;
+    margin: 0;
+}
+
 .section__header {
     display: grid;
     grid: 1fr;
-    background: white;
     padding: 20px;
+    margin: 2px;
 }
