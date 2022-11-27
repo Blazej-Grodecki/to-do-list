@@ -6,3 +6,14 @@
     background-color: white;
     margin-bottom: 10px;
 }
+
+.form__button {
+    background-color: teal;
+    color: white;
+    border: none;
+    padding: 5px;
+}
+
+.form__input {
+    padding: 5px;
+}
