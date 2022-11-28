@@ -11,6 +11,11 @@
     border: none;
 }
 
+.list__button:active {
+    border: 1.5px solid #000;
+    border-radius: 2px;
+}
+
 .list__button--done {
     color: white;
     font-weight: bold;
