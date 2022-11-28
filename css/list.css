@@ -6,7 +6,19 @@
 
 .list__button {
     height: 30px;
-    width: 30px
+    width: 30px;
+    background: green;
+    border: none;
+}
+
+.list__button--done {
+    color: white;
+    font-weight: bold;
+}
+
+.list__button--remove {
+    background-color: red;
+    color: white;
 }
 
 .list__item {
