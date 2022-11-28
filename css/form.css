@@ -7,13 +7,29 @@
     margin-bottom: 10px;
 }
 
+@media (max-width: 767px) {
+    .form {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .form__input {
+        flex-basis: 100%;
+    }
+}
+
 .form__button {
     background-color: teal;
     color: white;
     border: none;
-    padding: 5px;
+    padding: 10px;
+}
+
+.form__button:active {
+    border: 1px solid black;
 }
 
 .form__input {
-    padding: 5px;
+    padding: 10px;
+    border: 2px solid #ddd;
 }
