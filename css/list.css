@@ -1,7 +1,20 @@
+.list {
+    margin: 0;
+    padding: 20px;
+    list-style: none;
+}
+
+.list__button {
+    height: 30px;
+    width: 30px
+}
+
 .list__item {
     display: grid;
     grid-template-columns: auto 1fr auto;
-    justify-content: center;
+    grid-gap: 10px;
+    border-bottom: 1px solid #ddd;
+    align-items: center;
 }
 
 .list__done {
