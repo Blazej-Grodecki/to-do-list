@@ -18,10 +18,16 @@
     color: white;
     border: none;
     padding: 10px;
+    transition: 0.5s;
+}
+
+.form__button:hover {
+    transform: scale(1.1);
+    background-color: hsl(180, 100%, 30%);
 }
 
 .form__button:active {
-    border: 1px solid black;
+    background-color: hsl(180, 100%, 35%);
 }
 
 .form__input {
