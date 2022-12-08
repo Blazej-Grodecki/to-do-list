@@ -9,12 +9,7 @@
 
 @media (max-width: 767px) {
     .form {
-        display: flex;
-        flex-wrap: wrap;
-    }
-    
-    .form__input {
-        flex-basis: 100%;
+        grid-template-columns: 1fr;
     }
 }
 
