@@ -16,7 +16,7 @@
     border-radius: 2px;
 }
 
-.list__button--done {
+.list__button--toggleDone {
     color: white;
     font-weight: bold;
 }
