@@ -14,7 +14,7 @@
 }
 
 .form__button {
-    background-color: teal;
+    background-color: hsl(180, 100%, 25%);
     color: white;
     border: none;
     padding: 10px;
