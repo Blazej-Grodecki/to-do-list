@@ -1,5 +1,5 @@
 {
-  const tasks = [];
+  let tasks = [];
 
   const addNewTask = (newTaskContent) => {
     tasks.push({
@@ -16,6 +16,14 @@
 
   const toggleTaskDone = (taskIndex) => {
     tasks[taskIndex].done = !tasks[taskIndex].done;
+    render();
+  };
+
+  const completeAllTasks = () => {
+    tasks = tasks.map((tasks) => ({
+      ...tasks,
+      done: true,
+    }));
     render();
   };
 
@@ -39,6 +47,14 @@
     });
   };
 
+  const bindCompleteAllTasksEvents = () => {
+    const completeAllTasksButton = document.querySelector(".js-completeAllTasks");
+
+    if (completeAllTasksButton) {
+      completeAllTasksButton.addEventListener("click", completeAllTasks);
+    };
+  };
+
   const renderTasks = () => {
     let htmlString = "";
 
@@ -56,7 +72,7 @@
           </button>
         </li>
       `;
-    }
+    };
 
     document.querySelector(".js-tasks").innerHTML = htmlString;
   };
@@ -88,6 +104,7 @@
 
     bindRemoveEvents();
     bindToggleDoneEvents();
+    bindCompleteAllTasksEvents();
   };
 
   const onFormSubmit = (event) => {
