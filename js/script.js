@@ -88,7 +88,8 @@
           <button class="js-hideDoneTasks"> 
             Ukryj zakończone
           </button>
-          <button class="js-completeAllTasks">
+          <button class="js-completeAllTasks"
+            ${tasks.every(({ done }) => done) ? "disabled" : ""}>
             Ukończ wszystkie
           </button>
         </li>
