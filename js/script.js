@@ -39,7 +39,7 @@
     });
   };
 
-  const render = () => {
+  const renderTasks = () => {
     let htmlString = "";
 
     for (const task of tasks) {
@@ -59,6 +59,32 @@
     }
 
     document.querySelector(".js-tasks").innerHTML = htmlString;
+  };
+
+  const renderButtons = () => {
+    let htmlButtons = "";
+
+    if (tasks.length === 0) {
+      document.querySelector(".js-buttons").innerHTML = "";
+    } else {
+      htmlButtons += `
+        <li>
+          <button class="js-hideDoneTasks"> 
+            Ukryj zakończone
+          </button>
+          <button class="js-completeAllTasks">
+            Ukończ wszystkie
+          </button>
+        </li>
+      `;
+    };
+
+    document.querySelector(".js-buttons").innerHTML = htmlButtons;
+  };
+
+  const render = () => {
+    renderTasks();
+    renderButtons();
 
     bindRemoveEvents();
     bindToggleDoneEvents();
