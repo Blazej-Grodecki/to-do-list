@@ -46,3 +46,7 @@
 .tasks__button--remove:active {
     background-color: hsl(348, 83%, 57%);
 }
+
+.tasks__done--hidden {
+    display: none;
+}
