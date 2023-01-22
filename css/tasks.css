@@ -1,6 +1,6 @@
 .tasks {
     margin: 0;
-    padding: 20px;
+    padding: 0;
     list-style: none;
 }
 
@@ -10,6 +10,7 @@
     grid-gap: 10px;
     border-bottom: 1px solid #ddd;
     align-items: center;
+    padding: 10px;
 }
 
 .tasks__done {
@@ -21,6 +22,7 @@
     width: 30px;
     color: white;
     border: none;
+    padding: 0;
 }
 
 .tasks__button--toggleDone {
