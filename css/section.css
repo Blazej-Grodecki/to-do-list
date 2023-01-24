@@ -11,6 +11,12 @@
     border-bottom: 2px solid #ddd;
 }
 
+@media(max-width:767px) {
+    .section__header {
+        border-bottom: none;
+    }
+}
+
 .section__legend {
     display: grid;
     grid-template-columns: 1fr auto;
@@ -21,4 +27,14 @@
 .section__buttons {
     display: grid;
     grid-template-columns: auto auto;
+}
+
+@media (max-width:767px) {
+    .section__legend {
+        grid-template-columns: 1fr;
+        border-bottom: none;
+    }
+    .section__buttons {
+        grid-template-columns: 1fr;
+    }
 }

@@ -17,3 +17,9 @@
 .buttons:disabled {
     color: gray;
 }
+
+@media(max-width:767px) {
+    .buttons {
+        border-bottom: none;
+    }
+}
