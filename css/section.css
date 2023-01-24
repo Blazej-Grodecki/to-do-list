@@ -32,7 +32,7 @@
 @media (max-width:767px) {
     .section__legend {
         grid-template-columns: 1fr;
-        border-bottom: none;
+        border-bottom: 2px solid #ddd;
     }
     .section__buttons {
         grid-template-columns: 1fr;
