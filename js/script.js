@@ -3,22 +3,30 @@
   let hideDoneTasks = false;
 
   const addNewTask = (newTaskContent) => {
-    tasks.push({
-      content: newTaskContent,
-    });
-
+    tasks = [
+      ...tasks,
+      { content: newTaskContent },
+    ];
+   
     render();
   };
 
   const removeTask = (taskIndex) => {
-    tasks.splice(taskIndex, 1);
+    tasks = [
+      ...tasks.slice(0, taskIndex),
+      ...tasks.slice(taskIndex + 1),
+    ];
 
     render();
   };
 
-  const toggleTaskDone = (taskIndex) => {
-    tasks[taskIndex].done = !tasks[taskIndex].done;
-
+  const toggleTaskDone = (tasks, taskIndex) => {
+    tasks = [
+      ...tasks.slice(0, taskIndex),
+      { ...tasks[taskIndex].done = !tasks[taskIndex].done },
+      ...tasks.slice(taskIndex + 1),
+    ];
+    
     render();
   };
 
@@ -36,7 +44,7 @@
       hideDoneTasks = !hideDoneTasks;
 
       render();
-    }
+    };
   };
 
   const bindRemoveEvents = () => {
@@ -54,7 +62,7 @@
 
     toggleDoneButtons.forEach((toggleDoneButton, taskIndex) => {
       toggleDoneButton.addEventListener("click", () => {
-        toggleTaskDone(taskIndex);
+        toggleTaskDone(tasks, taskIndex);
       });
     });
   };
@@ -64,14 +72,14 @@
 
     if (completeAllTasksButton) {
       completeAllTasksButton.addEventListener("click", completeAllTasks);
-    }
+    };
   };
 
   const bindHideDoneTasksEvents = () => {
     const hideDoneTasksButton = document.querySelector(".js-hideDoneTasks");
     if (hideDoneTasksButton) {
       hideDoneTasksButton.addEventListener("click", hideAllDoneTasks);
-    }
+    };
   };
 
   const renderTasks = () => {
@@ -99,9 +107,7 @@
   const renderButtons = () => {
     let htmlButtons = "";
 
-    if (tasks.length === 0) {
-      document.querySelector(".js-buttons").innerHTML = "";
-    } else {
+    if (tasks.length !== 0) {
       htmlButtons += `
         <button class="buttons js-hideDoneTasks"> 
           ${hideDoneTasks === false ? "Ukryj ukończone" : "Pokaż ukończone"}
@@ -135,7 +141,7 @@
     if (newTaskContent !== "") {
       addNewTask(newTaskContent);
       newTaskElement.value = "";
-    }
+    };
 
     newTaskElement.focus();
   };
