@@ -1,0 +1,19 @@
+.buttons {
+    background: white;
+    border: none;
+    border-bottom: 2px solid #ddd;
+    padding: 20px;
+    color: hsl(180, 100%, 25%);
+}
+
+.buttons:hover {
+    color: hsl(180, 100%, 30%);
+}
+
+.buttons:active {
+    color: hsl(180, 100%, 35%);
+}
+
+.buttons:disabled {
+    color: gray;
+}
