@@ -106,15 +106,13 @@
       document.querySelector(".js-buttons").innerHTML = "";
     } else {
       htmlButtons += `
-        <li class="buttons">
-          <button class="js-hideDoneTasks"> 
+          <button class="buttons js-hideDoneTasks"> 
             ${hideDoneTasks === false ? "Ukryj ukończone" : "Pokaż ukończone"}
           </button>
-          <button class="js-completeAllTasks"
+          <button class="buttons js-completeAllTasks"
             ${tasks.every(({ done }) => done) ? "disabled" : ""}>
             Ukończ wszystkie
           </button>
-        </li>
       `;
     };
 

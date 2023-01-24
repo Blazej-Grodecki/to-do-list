@@ -5,12 +5,20 @@
 }
 
 .section__header {
-    padding: 20px;
     margin: 0;
+    padding: 20px;
     font-size: 20px;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 2px solid gray;
 }
 
-.section__body {
-    padding: 20px;
+.section__legend {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.section__buttons {
+    display: grid;
+    grid-template-columns: auto auto;
 }
