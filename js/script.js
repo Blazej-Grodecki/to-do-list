@@ -20,10 +20,13 @@
     render();
   };
 
-  const toggleTaskDone = (tasks, taskIndex) => {
+  const toggleTaskDone = (taskIndex) => {
     tasks = [
       ...tasks.slice(0, taskIndex),
-      { ...tasks[taskIndex].done = !tasks[taskIndex].done },
+      { 
+        ...tasks[taskIndex],
+        done: !tasks[taskIndex].done 
+      },
       ...tasks.slice(taskIndex + 1),
     ];
     
@@ -62,7 +65,7 @@
 
     toggleDoneButtons.forEach((toggleDoneButton, taskIndex) => {
       toggleDoneButton.addEventListener("click", () => {
-        toggleTaskDone(tasks, taskIndex);
+        toggleTaskDone(taskIndex);
       });
     });
   };
