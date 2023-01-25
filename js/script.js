@@ -33,9 +33,9 @@
     render();
   };
 
-  const completeAllTasks = () => {
-    tasks = tasks.map((tasks) => ({
-      ...tasks,
+  const markAllTasksDone = () => {
+    tasks = tasks.map((task) => ({
+      ...task,
       done: true,
     }));
 
@@ -74,7 +74,7 @@
     const completeAllTasksButton = document.querySelector(".js-completeAllTasks");
 
     if (completeAllTasksButton) {
-      completeAllTasksButton.addEventListener("click", completeAllTasks);
+      completeAllTasksButton.addEventListener("click", markAllTasksDone);
     };
   };
 
