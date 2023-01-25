@@ -23,6 +23,7 @@
     color: white;
     border: none;
     padding: 0;
+    transition: 0.5s;
 }
 
 .tasks__button--toggleDone {
