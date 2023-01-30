@@ -1,5 +1,5 @@
 .buttons {
-    background: white;
+    background: transparent;
     border: none;
     border-bottom: 2px solid #ddd;
     padding: 20px;
@@ -16,11 +16,12 @@
 }
 
 .buttons:disabled {
-    color: gray;
+    color: #ccc;
 }
 
 @media(max-width:767px) {
     .buttons {
         border-bottom: none;
+        padding: 10px;
     }
 }
