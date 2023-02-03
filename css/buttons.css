@@ -13,6 +13,7 @@
 
 .buttons__button:hover {
     color: hsl(180, 100%, 30%);
+    cursor: pointer;
 }
 
 .buttons__button:active {
